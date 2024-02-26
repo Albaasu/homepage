@@ -30,12 +30,14 @@ const statsContent = {
 
 const Stats = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: 'ease',
-      once: true,
-    });
-  });
+    if (typeof window !== "undefined") {
+      AOS.init({
+        duration: 700,
+        easing: 'ease',
+        once: true,
+      });
+    }
+  }, []);
   return (
     <section className='pt-20 pb-10'>
       <div className='container px-4 mx-auto'>

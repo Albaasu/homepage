@@ -40,12 +40,14 @@ const testimonialsContent = {
 
 function Testimonials() {
   useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: 'ease',
-      once: true,
-    });
-  });
+    if (typeof window !== "undefined") {
+      AOS.init({
+        duration: 700,
+        easing: 'ease',
+        once: true,
+      });
+    }
+  }, []);
   return (
     <section id='testimonials' className='py-20 bg-light '>
       <div className='container px-4 mx-auto'>

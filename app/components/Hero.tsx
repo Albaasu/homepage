@@ -23,12 +23,14 @@ const heroContent = {
 
 function Hero() {
   useEffect(() => {
-    AOS.init({
-      duration: 700,
-      easing: 'ease',
-      once: true,
-    });
-  });
+    if (typeof window !== "undefined") {
+      AOS.init({
+        duration: 700,
+        easing: 'ease',
+        once: true,
+      });
+    }
+  }, []);
 
   return (
     <section id='home' className='py-20 max-md:py-0'>
