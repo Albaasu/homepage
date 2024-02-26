@@ -37,7 +37,7 @@ const solutionsContent = {
 
 const Solution = () => {
   return (
-    <section id="solutions" className="py-32 bg-light  max-md:py-5 overflow-hidden">
+    <section id="solutions" className="py-32 bg-light  max-md:py-5">
     <div className="container px-4 mx-auto flex">
       <div className="lg:flex space-x-2 justify-between
       max-md:flex max-md:flex-col
