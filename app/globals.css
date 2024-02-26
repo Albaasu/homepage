@@ -2,32 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.btnBlue {
+  @apply py-4 px-5 text-white rounded-lg bg-blue transition-all ease-in-out duration-300 hover:bg-[#1e50a2] hover:shadow-lg hover:-top-1 relative top-0 inline-block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.btnGreen{
+  @apply py-4 px-5 text-white rounded-lg bg-green transition-all ease-in-out duration-300 hover:bg-[#006e54] hover:shadow-lg hover:-top-1 relative top-0 inline-block;
 }
